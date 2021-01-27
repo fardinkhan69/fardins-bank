@@ -87,7 +87,7 @@
         loginArea.style.display = "none";
         const transictionArea = document.getElementById("transition_area");
         transictionArea.style.display = "block";
-      });
+      }); 
 
       //deposit button event handler
       const depositBtn = document.getElementById("depositSend");
@@ -110,7 +110,7 @@
       withdrawBtn.addEventListener("click",function(){
         const withdrawNumber = getInputNumber("withdrawAmount");
         updateSpanText("currentWithdraw",withdrawNumber);
-
+        updateSpanText("currentBalance", -1*withdrawNumber)
 
 
         document.getElementById("withdrawAmount").value = "";
